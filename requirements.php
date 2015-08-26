@@ -84,6 +84,26 @@ return array(
 		'by' => 'CiiMS'
     ),
     array(
+        'name' => 'PHP ZIP',
+        'mandatory' => true,
+        'condition' => extension_loaded('zip'),
+        'memo' => 'For working with ZIP archives',
+		'by' => 'CiiMS'
+    ),
+    array(
+        'name' => 'PHP cURL',
+        'mandatory' => true,
+        'condition' => extension_loaded('curl'),
+        'memo' => 'For working with remote themes',
+		'by' => 'CiiMS'
+    ),
+    array(
+        'name' => 'PHP Mcrypt',
+        'mandatory' => true,
+        'condition' => extension_loaded('mcrypt'),
+		'by' => 'CiiMS'
+    ),
+    array(
         'name' => 'Fileinfo extension',
         'mandatory' => false,
         'condition' => extension_loaded('fileinfo'),
