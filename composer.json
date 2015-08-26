@@ -1,0 +1,13 @@
+{
+    "name": "ciims/requirements",
+    "description": "CiiMS requirements checker",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Charles R. Portwood II",
+            "email": "charlesportwoodii@ethreal.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
