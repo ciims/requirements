@@ -6,14 +6,14 @@
 /* @var $this YiiRequirementChecker */
 return array(
 	array(
-        'name' => 'PHP version',
+        'name' => 'PHP 5.1+ version',
         'mandatory' => true,
         'condition' => version_compare(PHP_VERSION, '5.1.0', '>='),
         'memo' => 'PHP 5.1.0 or higher is required.',
         'by' => 'Yii Framework 1'
     ),
     array(
-        'name' => 'PHP version',
+        'name' => 'PHP 5.5+ version',
         'mandatory' => true,
         'condition' => version_compare(PHP_VERSION, '5.5.0', '>='),
         'memo' => 'PHP 5.5.0 or higher is required.',
@@ -117,4 +117,32 @@ return array(
         'memo' => 'Required for REST API to send XML responses via <code>yii\web\XmlResponseFormatter</code>.',
         'by' => 'Yii Framework 1'
     ),
+	array(
+		'name' => 'Writable Assets Directory',
+		'mandatory' => true,
+		'condition' => is_writable(__DIR__ . '/../../../web/assets'),
+		'by' => 'CiiMS',
+		'memo' => 'Required by CiiMS for asset publication'
+	),	
+	array(
+		'name' => 'Writable Config Directory',
+		'mandatory' => true,
+		'condition' => is_writable(__DIR__ . '/../../../protected/config'),
+		'by' => 'CiiMS',
+		'memo' => 'Required by CiiMS Installer'
+	),	
+	array(
+		'name' => 'Writable Yii1 Runtime Directory',
+		'mandatory' => true,
+		'condition' => is_writable(__DIR__ . '/../../../protected/runtime'),
+		'by' => 'CiiMS',
+		'memo' => 'Required by CiiMS for logging, configuration temporary storage'
+	),	
+	array(
+		'name' => 'Writable Uploads Directory',
+		'mandatory' => true,
+		'condition' => is_writable(__DIR__ . '/../../../web/uploads'),
+		'by' => 'CiiMS',
+		'memo' => 'Required by CiiMS when using file based uploads'
+	),	
 );
