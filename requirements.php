@@ -145,4 +145,11 @@ return array(
 		'by' => 'CiiMS',
 		'memo' => 'Required by CiiMS when using file based uploads'
 	),	
+	array(
+		'name' => 'Writable Themes Directory',
+		'mandatory' => true,
+		'condition' => is_writable(__DIR__ . '/../../../themes'),
+		'by' => 'CiiMS',
+		'memo' => 'Required by CiiMS for uploading themes'
+	),	
 );
